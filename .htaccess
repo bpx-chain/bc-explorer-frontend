@@ -1,0 +1,10 @@
+Options -MultiViews -Indexes
+
+RewriteEngine on
+
+RewriteRule ^.*\.git.* - [R=404]
+
+RewriteRule ^search/?$ /search.php [L]
+RewriteRule ^block/(.*)/?$ /block.php?height=$1 [L]
+RewriteRule ^ajax/state/?$ /ajax/state.php [L]
+RewriteRule ^ajax/blocks/?$ /ajax/blocks.php [L]
